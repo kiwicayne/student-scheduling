@@ -1,0 +1,1 @@
+.\src\Console\ApiConsole\bin\Debug\ApiServer.exe .\data\students.csv 9000

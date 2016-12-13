@@ -1,0 +1,1 @@
+.\src\Console\ScheduleConsole\bin\Debug\MakeSchedule.exe .\data\students.csv

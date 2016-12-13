@@ -1,0 +1,33 @@
+#ignore thumbnails created by windows
+Thumbs.db
+#Ignore files build by Visual Studio
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.bak
+*.cache
+*.ilk
+*.log
+*.tmp
+[Bb]in
+[Dd]ebug*/
+*.sbr
+obj/
+[Rr]elease*/
+_ReSharper*/
+.fake/
+.paket/paket.exe
+.vs/
+packages/
+tmp/
+build/
+artifacts/
+src/GlobalAssemblyInfo.fs
+src/GlobalAssemblyInfo.cs
+*.ncrunch*
+_NCrunch_*

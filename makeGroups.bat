@@ -1,0 +1,1 @@
+.\src\Console\GroupConsole\bin\Debug\MakeGroups.exe .\data\students.csv
