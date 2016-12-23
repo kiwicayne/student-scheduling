@@ -1,9 +1,9 @@
-﻿namespace Societies.Core.Tests
+﻿namespace Student.Core.Tests
 
 open Xunit
 open FsUnit.Xunit
-open Societies.Core.Domain
-open Societies.Core.Sessions
+open Student.Core.Domain
+open Student.Core.Sessions
 open System
 
 module SessionsTests = 

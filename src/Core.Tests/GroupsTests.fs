@@ -1,19 +1,19 @@
-﻿namespace Societies.Core.Tests
+﻿namespace Student.Core.Tests
 open Xunit
 open FsUnit.Xunit
-open Societies.Core.Domain
-open Societies.Core.Utils
+open Student.Core.Domain
+open Student.Core.Utils
 
 module GroupsTests =
     
     module GeneticAlgorithmTests =
-        open Societies.Core.Groups
+        open Student.Core.Groups
 
         let rndInt = Probability.randomIntGenerator
             
         let rndGender () = 
             match Probability.rndMinMax rndInt 0 2 with
-            | 0 -> Unknown
+            | 0 -> NotSpecified
             | 1 -> Male
             | _ -> Female
 

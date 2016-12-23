@@ -1,8 +1,8 @@
-﻿namespace Societies.Core.Tests.AssemblyInfo
+﻿namespace Student.Core.Tests.AssemblyInfo
 
 open System.Reflection
 
-[<assembly: AssemblyTitle("Societies.Core.Tests")>]
+[<assembly: AssemblyTitle("Student.Core.Tests")>]
 [<assembly: AssemblyDescription("")>]
 
 do

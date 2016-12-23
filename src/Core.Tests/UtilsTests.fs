@@ -1,9 +1,9 @@
-﻿namespace Societies.Core.Tests
+﻿namespace Student.Core.Tests
 open Xunit
 open FsUnit.Xunit
-open Societies.Core.Utils
-open Societies.Core.Utils.Random
-open Societies.Core.Utils.Probability
+open Student.Core.Utils
+open Student.Core.Utils.Random
+open Student.Core.Utils.Probability
 
 module UtilsTests =        
 
@@ -23,7 +23,7 @@ module UtilsTests =
             results |> should contain 1
 
     module ListTests = 
-        open Societies.Core.Utils
+        open Student.Core.Utils
 
         module DistributeEvenly =
             [<Fact>]

@@ -1,8 +1,8 @@
-﻿namespace Societies.Core.Tests
+﻿namespace Student.Core.Tests
 open Xunit
 open FsUnit.Xunit
-open Societies.Core.Scheduling.FitnessScore
-open Societies.Core.Domain
+open Student.Core.Scheduling.FitnessScore
+open Student.Core.Domain
 
 module SchedulingTests =
     

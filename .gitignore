@@ -26,6 +26,7 @@ _ReSharper*/
 packages/
 tmp/
 build/
+deploy/
 artifacts/
 src/GlobalAssemblyInfo.fs
 src/GlobalAssemblyInfo.cs
