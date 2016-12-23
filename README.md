@@ -12,5 +12,3 @@ Before running the above scripts open the SchedulingAndGrouping.sln solution fil
 
 **Coming Soon**
 * Create build file which will run on Windows or Linux
-* Create shell scripts for execution under Linux
-* Convert projects to use DotNetCore 
