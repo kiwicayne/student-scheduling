@@ -6,9 +6,6 @@ There are 3 batch files which can be run:
 * makeSchedule.bat - This demonstrates filling activities with students while fullfilling complex enrollment requirments and activity contraints
 * runApi.bat - A simple API for calling the grouping and scheduling code
 
-This is still a work in progress and currently only setup to run on Windows.  However, the code is completely cross platform.  
+This is currently only setup to run on Windows.  However, the code is completely cross platform.  
 
-Before running the above scripts open the SchedulingAndGrouping.sln solution file in Visual Studio, restore all NuGet packages and rebuild.  
-
-**Coming Soon**
-* Create build file which will run on Windows or Linux
+To build run .\build.cmd.
