@@ -3,9 +3,9 @@ Example genetic algorithm for scheduling students and grouping them by diversity
 
 There are 3 batch files which can be run:
 * makeGroups.bat - This demonstrates grouping students by diversity
-* makeSchedule.bat - This demonstrates filling activities with students while fullfilling complex enrollment requirments and activity contraints
+* makeSchedule.bat - This demonstrates filling activities with students while fulfilling complex enrollment requirements and activity contraints
 * runApi.bat - A simple API for calling the grouping and scheduling code
 
-This is currently only setup to run on Windows.  However, the code is completely cross platform.  
+To build run `dotnet build`.
 
-To build run .\build.cmd.
+To test run `dotnet test`.

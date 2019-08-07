@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MakeSchedule": {
+      "commandName": "Project",
+      "commandLineArgs": "..\\..\\..\\..\\..\\..\\data\\students.csv"
+    }
+  }
+}

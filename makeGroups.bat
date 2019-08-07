@@ -1,1 +1,1 @@
-.\src\Console\GroupConsole\bin\Debug\MakeGroups.exe .\data\students.csv
+dotnet run --project .\src\Console\GroupConsole\MakeGroups.fsproj .\data\students.csv

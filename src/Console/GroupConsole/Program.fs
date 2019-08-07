@@ -1,40 +1,41 @@
-﻿open Student.Core.Groups
+﻿module MakeGroups
+open Student.Core.Groups
 open Student.Core.Domain
 open Print.Groups
 open System.Diagnostics
 open System
 open Student.Infrastructure.Repositories
 
-let cprintf _ fmt args = 
+let cprintf _ fmt args =
     Console.BackgroundColor <- ConsoleColor.Blue
     printf fmt args
     Console.ResetColor()
     ()
 
-let cprintfn c fmt args = 
+let cprintfn c fmt args =
     Console.ForegroundColor <- c
     printfn fmt args
     Console.ResetColor()
     ()
 
-let runGenetic mentors students = 
-    
-    let config = 
+let runGenetic mentors students =
+
+    let config =
         { PopulationSize = 100
           MaxEvolutions = 500
           AcceptableScore = 95.0 }
 
     let stopwatch = Stopwatch.StartNew()
     printf "Generating initial population..."
-    let bestSolution = 
+    let bestSolution =
         GeneticAlgorithm.createGrouping mentors students config
     stopwatch.Stop()
     cprintfn ConsoleColor.Cyan "done %dms" stopwatch.ElapsedMilliseconds
     printfn ""
-    printFitness bestSolution true    
+    printFitness bestSolution true
     GroupFileRepository.writeGroups @"genetic.csv" bestSolution
 
-let runSorted mentors students = 
+let runSorted mentors students =
     let stopwatch = Stopwatch.StartNew()
     printf "Running sorted group algorithm..."
     let result = SortAgorithm.createGrouping mentors students
@@ -42,12 +43,12 @@ let runSorted mentors students =
     cprintfn ConsoleColor.Cyan "done %dms" stopwatch.ElapsedMilliseconds
     printFitness result false
 
-let runRandom mentors students = 
+let runRandom mentors students =
     let stopwatch = Stopwatch.StartNew()
     printf "Running random group algorithm..."
 
-    let getFitness (grouping: Group list) = 
-        grouping 
+    let getFitness (grouping: Group list) =
+        grouping
         |> List.map (fun x -> x.Students)
         |> FitnessScore.getGroupingFitnessScore
 
@@ -59,38 +60,38 @@ let runRandom mentors students =
         |> List.sortByDescending (fun (x,_) -> x)
         |> List.head
 
-    stopwatch.Stop()    
+    stopwatch.Stop()
     cprintfn ConsoleColor.Cyan "done %dms" stopwatch.ElapsedMilliseconds
     printFitness result false
 
-let getFilename (args: string[]) = 
+let getFilename (args: string[]) =
     if args.Length <> 1 then failwith "Invalid number of args, expecting a single path to student.csv file"
     if not <| (args.[0] |> System.IO.File.Exists) then failwith (sprintf "Unable to find file '%s'" args.[0])
     args.[0]
 
 [<EntryPoint>]
-let main args =   
+let main args =
     try
         let getStudents () = StudentRepository.getStudents (args |> getFilename)
 
-        printfn "Making %d groups for %d students\n" (MentorRepository.getMentors().Length) 
+        printfn "Making %d groups for %d students\n" (MentorRepository.getMentors().Length)
             (getStudents().Length)
 
         let mentors = MentorRepository.getMentors()
         let students = getStudents()
-    
+
         runRandom mentors students
         printfn ""
-        
+
         runSorted mentors students
         printfn ""
-    
+
         runGenetic mentors students
-    
+
         printfn "\nAll done, press Enter to exit."
         System.Console.ReadLine() |> ignore
         0
-    with 
-    | ex -> 
+    with
+    | ex ->
         printfn "Oops, an error occurred '%s'" ex.Message
         1

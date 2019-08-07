@@ -1,1 +1,1 @@
-.\src\Console\ApiConsole\bin\Debug\ApiServer.exe .\data\students.csv 9000
+dotnet run --project .\src\Console\ApiConsole\ApiServer.fsproj .\data\students.csv 9000

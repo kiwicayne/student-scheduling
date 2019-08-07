@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MakeGroups": {
+      "commandName": "Project",
+      "commandLineArgs": "..\\..\\..\\..\\..\\..\\data\\students.csv"
+    }
+  }
+}

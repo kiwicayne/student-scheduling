@@ -1,1 +1,1 @@
-.\src\Console\ScheduleConsole\bin\Debug\MakeSchedule.exe .\data\students.csv
+dotnet run --project .\src\Console\ScheduleConsole\MakeSchedule.fsproj .\data\students.csv

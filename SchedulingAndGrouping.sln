@@ -1,32 +1,32 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Student.Core", "src\Core\Student.Core.fsproj", "{F31D9619-FCE5-4CC5-B864-9B1D078D18B9}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Student.Core", "src\Core\Student.Core.fsproj", "{F31D9619-FCE5-4CC5-B864-9B1D078D18B9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Other", "Other", "{11905466-D658-457C-A7AD-70EF341D1CB5}"
 	ProjectSection(SolutionItems) = preProject
-		build.cmd = build.cmd
-		build.fsx = build.fsx
 		LICENSE = LICENSE
-		paket.dependencies = paket.dependencies
+		makeGroups.bat = makeGroups.bat
+		makeSchedule.bat = makeSchedule.bat
 		README.md = README.md
+		startApi.bat = startApi.bat
 	EndProjectSection
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Student.Infrastructure", "src\Infrastructure\Student.Infrastructure.fsproj", "{5D04DF3B-2729-483B-AD73-411D3DB91B46}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Student.Infrastructure", "src\Infrastructure\Student.Infrastructure.fsproj", "{5D04DF3B-2729-483B-AD73-411D3DB91B46}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MakeGroups", "src\Console\GroupConsole\MakeGroups.fsproj", "{2360B9AE-4488-42B0-9B3A-8AA3FA7CA0A7}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "MakeGroups", "src\Console\GroupConsole\MakeGroups.fsproj", "{2360B9AE-4488-42B0-9B3A-8AA3FA7CA0A7}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MakeSchedule", "src\Console\ScheduleConsole\MakeSchedule.fsproj", "{2EA15743-EAA8-4A39-94B1-D1F2BBA3912F}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "MakeSchedule", "src\Console\ScheduleConsole\MakeSchedule.fsproj", "{2EA15743-EAA8-4A39-94B1-D1F2BBA3912F}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Student.Api", "src\Api\Student.Api.fsproj", "{E2112F6B-2F13-4D50-A3F0-03AC05F2833F}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Student.Api", "src\Api\Student.Api.fsproj", "{E2112F6B-2F13-4D50-A3F0-03AC05F2833F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{9F5418CB-B570-4EAE-87F8-3B3688AA8495}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ApiServer", "src\Console\ApiConsole\ApiServer.fsproj", "{F93C2491-FA23-4FC9-BAEE-EBFD2F18E60C}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ApiServer", "src\Console\ApiConsole\ApiServer.fsproj", "{F93C2491-FA23-4FC9-BAEE-EBFD2F18E60C}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Student.Core.Tests", "src\Core.Tests\Student.Core.Tests.fsproj", "{CBA617E3-3E5D-4DCD-AE79-C80530440BDA}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Student.Core.Tests", "src\Core.Tests\Student.Core.Tests.fsproj", "{CBA617E3-3E5D-4DCD-AE79-C80530440BDA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0CFC5704-323A-446D-BFD7-9ADFE862541F}"
 EndProject
@@ -73,5 +73,8 @@ Global
 		{2EA15743-EAA8-4A39-94B1-D1F2BBA3912F} = {9F5418CB-B570-4EAE-87F8-3B3688AA8495}
 		{F93C2491-FA23-4FC9-BAEE-EBFD2F18E60C} = {9F5418CB-B570-4EAE-87F8-3B3688AA8495}
 		{CBA617E3-3E5D-4DCD-AE79-C80530440BDA} = {0CFC5704-323A-446D-BFD7-9ADFE862541F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4256F372-1A2A-4199-983F-784A5547F7DA}
 	EndGlobalSection
 EndGlobal
