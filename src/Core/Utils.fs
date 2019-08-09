@@ -8,13 +8,13 @@ module Probability =
     /// Note: .Net Random max parameter is EXCLUSIVE, this is INCLUSIVE
     let randomIntGenerator = 
         // Create master seed generator and thread local value
-        let seedGenerator = new Random()
+        let seedGenerator = Random()
         
         let localGenerator = 
             new ThreadLocal<Random>(fun _ -> 
             lock seedGenerator (fun _ -> 
                 let seed = seedGenerator.Next()
-                new Random(seed)))
+                Random(seed)))
         // Return function that uses thread local random generator
         fun min max -> 
             let inclusiveMax = 
@@ -43,9 +43,8 @@ module Statistics =
         let stdDev = 
             if mean > 0.0 then 
                 let sumDeviation = 
-                    values
-                    |> List.map (fun x -> ((x - mean) * (x - mean) |> float))
-                    |> List.sum
+                    values                 
+                    |> List.sumBy (fun x -> ((x - mean) * (x - mean) |> float))
                 
                 let variance = sumDeviation / (float values.Length)
                 sqrt variance

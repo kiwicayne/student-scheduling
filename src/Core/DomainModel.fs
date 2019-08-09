@@ -54,10 +54,10 @@ type EnrollmentPriority =
     | Low
     | Lowest
 
-[<Measure>] type times
+[<Measure>] type Times
 
 type TwoPeersAttendanceRequirement =
-    | RequireEachPeerToPerformBothRolesPerBlock of int<times>
+    | RequireEachPeerToPerformBothRolesPerBlock of int<Times>
   
 type HouseAttendanceRequirement =
     | RequireEachStudentToAttendEverySession

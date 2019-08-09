@@ -68,7 +68,7 @@ let main args =
         // ********* Enrollment criteria - combines the source and attendance requirement *************
 
         let ``2 peers from each group must perform each role 3 times per block`` =
-            FromGroup (SelectTwoPeers (RequireEachPeerToPerformBothRolesPerBlock 3<times>))
+            FromGroup (SelectTwoPeers (RequireEachPeerToPerformBothRolesPerBlock 3<Times>))
 
         let ``each session has a maximum of 10 students from the house, each student must attend once this year`` =
             FromHouse (SelectMaxStudents (10, RequireEachStudentToAttendOnceThisYear))

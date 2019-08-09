@@ -18,9 +18,9 @@ module FitnessScore =
     /// A score of 0 is therefore an equal number of males and females, or completely unknowns
     let private getGenderFitnessScore student = 
         match (student.Gender) with
-        | Gender.Male -> 1
-        | Gender.Female -> -1
-        | Gender.NotSpecified -> 0
+        | Male -> 1
+        | Female -> -1
+        | NotSpecified -> 0
     
     let private getGenderFitnessScoreForGroup (students: Student list) = 
         students
@@ -50,10 +50,12 @@ module FitnessScore =
                     groupBy s.Age into g
                     select (g.Count())
             }
-        (score
-         |> Seq.map (fun x -> x * x)
-         |> Seq.sum)
-        - students.Length
+        
+        let squareSum =
+            score
+            |> Seq.sumBy (fun x -> x * x)
+        
+        squareSum - students.Length
     
     /// This converts the age score to be out of 100, where 100 is perfect and 0 is terrible.
     /// To get 100 each student would be in a different age group, to get a 0 all
@@ -79,10 +81,12 @@ module FitnessScore =
                 groupBy s.Major into g
                 select (g.Count())
             }
-        (score
-         |> Seq.map (fun x -> x * x)
-         |> Seq.sum)
-        - students.Length
+
+        let squareSum =
+            score
+            |> Seq.sumBy (fun x -> x * x)             
+           
+        squareSum - students.Length
     
     /// This converts the major score to be out of 100, where 100 is perfect and 0 is terrible.
     /// To get 100 each student would have a different major, to get a 0 all
