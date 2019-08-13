@@ -1,4 +1,5 @@
 ﻿module MakeGroups
+
 open Student.Core.Groups
 open Student.Core.Domain
 open Print.Groups
@@ -89,7 +90,7 @@ let main args =
         runGenetic mentors students
 
         printfn "\nAll done, press Enter to exit."
-        System.Console.ReadLine() |> ignore
+        Console.ReadLine() |> ignore
         0
     with
     | ex ->

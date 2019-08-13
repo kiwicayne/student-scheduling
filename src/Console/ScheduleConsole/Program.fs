@@ -194,7 +194,7 @@ let main args =
 
         cprintfn ConsoleColor.Cyan "done %dms" stopwatch.ElapsedMilliseconds
 
-        System.Console.ReadLine() |> ignore
+        Console.ReadLine() |> ignore
         0
     with
     | ex ->

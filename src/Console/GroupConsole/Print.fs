@@ -1,4 +1,5 @@
 ﻿module Print
+
 open Student.Core.Domain
 
 module Groups =

@@ -25,5 +25,5 @@ let configServer port token =
 
 let start config token =
     let webServerconfig = configServer config.Port token
-    let listening, server = startWebServerAsync webServerconfig (app config)
+    let _, server = startWebServerAsync webServerconfig (app config)
     Async.Start(server, token)

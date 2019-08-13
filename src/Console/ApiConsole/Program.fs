@@ -1,6 +1,8 @@
 ﻿module ApiServer
+
 open Student.Api
 open System
+open System.IO
 open System.Threading
 open Student.Core.Utils.Convert
 open Student.Api.Server
@@ -8,7 +10,7 @@ open Student.Api.Server
 /// Load server configuration from the arguments passed to the console application
 let parseArgs (args: string[]) =
     if args.Length <> 2 then failwith "Invalid number of args, expecting a path to student.csv file and port number"
-    if not <| (args.[0] |> System.IO.File.Exists) then failwith (sprintf "Unable to find file '%s'" args.[0])
+    if not <| (args.[0] |> File.Exists) then failwith (sprintf "Unable to find file '%s'" args.[0])
     match args.[1] with
     | Int i ->
         { StudentFile = args.[0]

@@ -2,7 +2,6 @@
 open Xunit
 open FsUnit.Xunit
 open Student.Core.Utils
-open Student.Core.Utils.Random
 open Student.Core.Utils.Probability
 
 module UtilsTests =        
@@ -23,7 +22,6 @@ module UtilsTests =
             results |> should contain 1
 
     module ListTests = 
-        open Student.Core.Utils
 
         module DistributeEvenly =
             [<Fact>]
